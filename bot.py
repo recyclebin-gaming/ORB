@@ -57,7 +57,7 @@ async def endconv(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 if __name__ == '__main__':
-    TOKEN = "6126139946:AAGBD4Y1NRxXFQ2JnPEhROD9SNVsgmiDjic"
+    TOKEN = "token here"
     application = ApplicationBuilder().token(TOKEN).build()
 
     start_handler = CommandHandler("start", start)
