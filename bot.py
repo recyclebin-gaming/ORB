@@ -20,7 +20,7 @@ CHOOSING = 1
 
 
 async def start(update: Update, _context: ContextTypes.DEFAULT_TYPE):
-    await update.effective_chat.send_message("nya")
+    await update.effective_chat.send_message("hello")
 
 
 async def getitem(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -45,7 +45,7 @@ async def senditem(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     except FileNotFoundError:
         await update.message.reply_text(
-            "whoops i couldn't find that on my local database this make take a minutee please be patient")
+            "whoops i couldn't find that on my local database this make take a minute please be patient")
         web.fetch_item(item)
         await retry_on_error(update.message.reply_photo(photo=open(f"pics/{item}.png", "rb")))
     return ConversationHandler.END
